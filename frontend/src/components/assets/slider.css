@@ -1,0 +1,10 @@
+.slider-container {
+    width: 80%;
+    margin: auto;
+    }
+    
+    .slider-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    }

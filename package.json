@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.6.0",
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
+    "chart.js": "^4.4.4",
+    "date-fns": "^4.1.0",
+    "leaflet": "^1.9.4",
+    "leaflet-draw": "^1.0.4",
+    "prop-types": "^15.8.1",
+    "react-bootstrap": "^2.10.5",
+    "react-chartjs-2": "^5.2.0",
+    "react-ga": "^3.3.1",
+    "react-leaflet": "^4.2.1",
+    "react-leaflet-draw": "^0.20.4",
+    "react-leaflet-google-layer": "^2.2.0",
+    "react-redux": "^9.1.2",
+    "react-slick": "^0.30.2"
+  }
+}

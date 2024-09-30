@@ -1,0 +1,23 @@
+/* *{
+  margin: 0;
+  padding: 0;
+  background-color: rgb(206, 206, 206);
+}
+*/
+#link {
+  padding: 1vh;
+  text-decoration: none;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 600;
+}
+
+#link:hover{
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+} 
+/* src/App.css */
+.custom-icon {
+  font-size: 20px; /* Ajusta el tamaño del icono */
+  color: #007bff; /* Cambia el color del icono */
+}
