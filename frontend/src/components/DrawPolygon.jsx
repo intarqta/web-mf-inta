@@ -25,7 +25,7 @@ const DrawMap = () => {
 
   const sendCoordinates = async (geometry) => {
     try {
-      const response = await fetch('http://127.0.0.1:8000/api/ndvi/', {
+      const response = await fetch('https://apigee-4ud9.onrender.com/api/ndvi/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -35,11 +35,13 @@ const DrawMap = () => {
       const data = await response.json();
       setShowChart(JSON.parse(data))
       setDatos(JSON.parse(data));
+      
     } catch (error) {
       console.error('Error al enviar las coordenadas:', error);
+      console.log(geometry)
     }
   };
-
+   
     const _onCreate = (event) => {
       const { layer } = event;
       const newPositions = layer.getLatLngs()[0].map(latlng => [latlng.lng, latlng.lat]);
