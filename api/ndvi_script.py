@@ -2,13 +2,12 @@ import ee
 import json
 from google.oauth2 import service_account
 import os
-from ee import oauth
 
 # Cargar las credenciales desde una variable de entorno
 key_file = os.environ['GOOGLE_APPLICATION_CREDENTIALS']  # Establece esta variable en Render
 
 # Inicializa Earth Engine
-credentials = service_account.Credentials.from_service_account_info(key_file, scopes=oauth.SCOPES)
+credentials = service_account.Credentials.from_service_account_file(key_file)
 ee.Initialize(credentials)
 
 def get_ndvi(polygon):
