@@ -3,7 +3,7 @@ import json
 
 def get_ndvi(polygon):
     ee.Authenticate()
-    ee.Initialize(project="cr-santa-fe")
+    ee.Initialize(project="proyec2020")
     
     # Define the time range
     start_date = '2024-01-01'
