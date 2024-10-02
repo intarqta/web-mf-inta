@@ -1,9 +1,16 @@
 import ee
 import json
+import os
+# Cargar las credenciales desde una variable de entorno
+key_file = os.environ['GOOGLE_APPLICATION_CREDENTIALS']  # Establece esta variable en Render
+
+# Inicializa Earth Engine
+credentials = service_account.Credentials.from_service_account_file(key_file)
+ee.Initialize(credentials)
 
 def get_ndvi(polygon):
-    ee.Authenticate()
-    ee.Initialize(project="proyec2020")
+    # ee.Authenticate()
+    # ee.Initialize(project="proyec2020")
     
     # Define the time range
     start_date = '2024-01-01'
