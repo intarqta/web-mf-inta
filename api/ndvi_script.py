@@ -7,7 +7,7 @@ import os
 key_file = os.environ['GOOGLE_APPLICATION_CREDENTIALS']  # Establece esta variable en Render
 
 # Inicializa Earth Engine
-credentials = service_account.Credentials.from_service_account_file(key_file)
+credentials = service_account.Credentials.from_service_account_file(json.dumps(key_file))
 ee.Initialize(credentials)
 
 def get_ndvi(polygon):
