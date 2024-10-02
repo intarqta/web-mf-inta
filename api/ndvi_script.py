@@ -1,14 +1,9 @@
 import ee
 import json
-import os
-from oauth2client.service_account import ServiceAccountCredentials
-# Obtén el contenido de la variable de entorno
-json_keyfile = os.environ.get('GOOGLE_APPLICATION_CREDENTIALS')
-# Carga las credenciales desde la cadena JSON
-credentials = ServiceAccountCredentials.from_json_keyfile_dict(json.loads(json_keyfile))
 
 def get_ndvi(polygon):
-    ee.Initialize(credentials)
+    ee.Authenticate()
+    ee.Initialize(project="cr-santa-fe")
     
     # Define the time range
     start_date = '2024-01-01'
