@@ -1,5 +1,6 @@
 import ee
 import json
+from google.oauth2 import service_account
 import os
 # Cargar las credenciales desde una variable de entorno
 key_file = os.environ['GOOGLE_APPLICATION_CREDENTIALS']  # Establece esta variable en Render
