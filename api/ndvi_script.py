@@ -1,3 +1,6 @@
+import ee
+import json
+from google.oauth2 import service_account
 from pathlib import Path
 
 def initialize_earth_engine():
