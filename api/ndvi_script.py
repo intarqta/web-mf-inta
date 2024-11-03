@@ -1,10 +1,18 @@
 import ee
 import json
 from google.oauth2 import service_account
-from pathlib import Path
+import os
+
+# Cargar las credenciales desde una variable de entorno
+key_file = os.environ['GOOGLE_APPLICATION_CREDENTIALS']  # Establece esta variable en Render
+# Obtener la ruta del directorio actual
+# directorio_actual = Path.cwd()
+# # Establecer la ruta relativa
+# ruta_relativa = directorio_actual.parent / 'key.json'
 
 def initialize_earth_engine():
     service_account = 'api-monitoreo-forrajero@proyec2020.iam.gserviceaccount.com'
+    credentials = ee.ServiceAccountCredentials(service_account, key_file)
     credentials = ee.ServiceAccountCredentials(service_account, '/etc/secrets/GOOGLE_APPLICATION_CREDENTIALS')
     ee.Initialize(credentials)
 
