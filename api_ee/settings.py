@@ -138,7 +138,7 @@ if not DEBUG:
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Que servidores de pueden conectar a este servidor
-CORS_ALLOWED_ORIGINS = ["http://localhost:5173", "http://localhost:3000", "https://web-mf-inta-intarqta-intarqtas-projects.vercel.app"]
+CORS_ALLOWED_ORIGINS = ["http://localhost:5173", "http://localhost:3000", "https://web-mf-inta-intarqta-intarqtas-projects.vercel.app", "https://web-mf-inta.vercel.app/"]
 
 # Configuración de Google Earth Engine
 GOOGLE_APPLICATION_CREDENTIALS = os.environ.get('GOOGLE_APPLICATION_CREDENTIALS')
