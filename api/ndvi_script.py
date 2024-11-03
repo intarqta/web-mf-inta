@@ -1,11 +1,14 @@
-import ee
-import json
-from google.oauth2 import service_account
 from pathlib import Path
 
+def initialize_earth_engine():
+    service_account = 'api-monitoreo-forrajero@proyec2020.iam.gserviceaccount.com'
+    credentials = ee.ServiceAccountCredentials(service_account, '/etc/secrets/GOOGLE_APPLICATION_CREDENTIALS')
+    ee.Initialize(credentials)
+
 def get_ndvi(polygon, start_date='2024-01-01', end_date='2024-09-30', recurso_forrajero=None, presencia_leñosas=False, porcentaje_leñosas=0):
-    ee.Authenticate()
-    ee.Initialize(project="proyec2020")
+    # ee.Authenticate()
+    # ee.Initialize(project="proyec2020")
+    initialize_earth_engine()
     
     # Definir rango de fechas a partir de los parámetros
     # Load the MODIS NDVI dataset
