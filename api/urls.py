@@ -5,11 +5,6 @@ from .views import NDVIAPIView
 from rest_framework.documentation import include_docs_urls
 # from .views import PastureAvailabilityAPIView
 
-
-rourter = routers.DefaultRouter()
-rourter.register('api', views.TaskView, 'api')
-
-
 urlpatterns = [
     path("api/v1/", include(rourter.urls)),
     path('ndvi/', NDVIAPIView.as_view(), name='ndvi'),
