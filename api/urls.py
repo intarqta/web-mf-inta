@@ -6,7 +6,6 @@ from rest_framework.documentation import include_docs_urls
 # from .views import PastureAvailabilityAPIView
 
 urlpatterns = [
-    path("api/v1/", include(rourter.urls)),
     path('ndvi/', NDVIAPIView.as_view(), name='ndvi'),
     # path('disponibilidad/', PastureAvailabilityAPIView.as_view(), name='pasto-disponibilidad'),
 ]
