@@ -6,9 +6,8 @@ from rest_framework.response import Response
 from rest_framework import status
 import geojson
 from .evaluate import get_ndvi_and_regions
-from .ndvi_script import get_ndvi, calculate_centroid, get_nasa_power_data
+from .ndvi_script import calculate_centroid, get_nasa_power_data
 import json
-
 
 class NDVIAPIView(APIView):
     def post(self, request):
@@ -21,8 +20,8 @@ class NDVIAPIView(APIView):
             end_date = request.data.get('end_date', '2024-09-30')
             
             # Llamar a la función get_ndvi para obtener los datos de NDVI
-            ndvi_data = get_ndvi_and_regions(polygon)
-            print(ndvi_data)
+            ndvi_data = get_ndvi_and_regions(polygon, start_date, end_date)
+            # print(ndvi_data)
 
             # Calcular el centroide del polígono
             centroid = calculate_centroid(polygon)
